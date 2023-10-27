@@ -123,21 +123,4 @@ class PenjaringAlumniResource extends Resource
             'edit' => Pages\EditPenjaringAlumni::route('/{record}/edit'),
         ];
     }
-    // public static function downloadPdfFile($namaFile): BinaryFileResponse
-    // {
-    //     return response()->download(public_path("{$namaFile}"));
-    // }
-    // public function exportPenjaring()
-    // {
-    //     // $penjaringanAlumni = PenjaringAlumni::All();
-    //     // return (new FastExcel(PenjaringAlumni::all()))->download('users.xlsx');
-
-    //     $namaFile = "Alumni.xlsx";
-
-    //     (new fastexcel(PenjaringAlumni::exportData()))->export("{$namaFile}");
-
-    //     return PenjaringAlumniResource::downloadPdfFile("{$namaFile}");
-
-
-    // }
 }
