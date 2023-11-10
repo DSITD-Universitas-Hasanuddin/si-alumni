@@ -26,7 +26,10 @@ Route::get('/event/post/{post:slug}', \App\Http\Livewire\ShowPost::class)->name(
 Route::get('/survey', function () {
     return view('pages.survey.index');
 })->name('survey');
-
+Route::get('/jobs', function () {
+    return view('pages.jobs.index');
+})->name('jobs');
+Route::get('/jobs/{job:id}', \App\Http\Livewire\ShowJob::class)->name('jobs-post');
 
 
 Route::middleware([
@@ -37,10 +40,6 @@ Route::middleware([
     Route::get('/home', function () {
         return view('pages.home');
     })->name('home');
-    Route::get('/jobs', function () {
-        return view('pages.jobs.index');
-    })->name('jobs');
-    Route::get('/jobs/{job:id}', \App\Http\Livewire\ShowJob::class)->name('jobs-post');
     Route::get('/newsletter', function () {
         return view('pages.newsletter.index');
     })->name('newsletter');

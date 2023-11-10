@@ -91,7 +91,7 @@
             </li>
 
             <li>
-                <a href="https://www.instagram.com/dirhapda/" rel="noreferrer" target="_blank"
+                <a href="https://www.instagram.com/direktoratalumni_unhas/" rel="noreferrer" target="_blank"
                     class="text-white transition hover:text-white/75">
                     <span class="sr-only">Instagram</span>
                     <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
