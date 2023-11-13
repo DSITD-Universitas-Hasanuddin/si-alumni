@@ -88,6 +88,21 @@
             </article>
         </div>
 
+        <a id="news" class="block relative invisible top-[-70px]"></a>
+        <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-14 ">
+            <article>
+                <div class="space-y-2 text-center">
+                    <h2 class="text-3xl font-poppins font-bold decoration-blue-900">Jobs and Vacancy</h2>
+                </div>
+                @livewire('index-jobs')
+                <a class="flex justify-end items-baseline mt-6 text-lg font-semibold text-blue-600 hover:text-blue-900 focus:text-blue-900"
+                    href="{{ route('jobs') }}">
+                    <span>Lihat Berita Selengkapnya</span>
+                    <span class="text-xs ml-1">&#x279c;</span>
+                </a>
+            </article>
+        </div>
+
         {{-- about us --}}
         <a id="about-us" class="block relative invisible top-[-20px]"></a>
         <div class="py-10 lg:py-20 bg-blue-50 font-poppins dark:bg-gray-800">
