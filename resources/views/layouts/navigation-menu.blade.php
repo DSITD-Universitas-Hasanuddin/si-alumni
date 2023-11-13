@@ -59,7 +59,7 @@
                     <x-nav-link href='/#dana-abadi'>
                         {{ __('Donasi') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('jobs') }}">
+                    <x-nav-link :href="route('jobs')" :active="request()->routeIs('jobs')">
                         {{ __('Jobs') }}
                     </x-nav-link>
                     <x-nav-link href="/#news" :active="request()->routeIs('event')">
@@ -205,6 +205,9 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href='https://alumni.unhas.ac.id/dana-abadi' :active="request()->routeIs('')">
                     {{ __('Donasi') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('jobs')" :active="request()->routeIs('jobs')">
+                    {{ __('Jobs') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('event')" :active="request()->routeIs('event')">
                     {{ __('News & Events') }}
