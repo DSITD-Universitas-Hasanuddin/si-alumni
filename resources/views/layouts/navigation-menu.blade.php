@@ -56,16 +56,16 @@
                     <x-nav-link href="{{ route('landing') }}" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link href='#dana-abadi'>
+                    <x-nav-link href='/#dana-abadi'>
                         {{ __('Donasi') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('jobs') }}" :active="request()->routeIs('jobs')">
+                    <x-nav-link :href="route('jobs')" :active="request()->routeIs('jobs')">
                         {{ __('Jobs') }}
                     </x-nav-link>
-                    <x-nav-link href="#news" :active="request()->routeIs('event')">
+                    <x-nav-link href="/#news" :active="request()->routeIs('event')">
                         {{ __('News & Events') }}
                     </x-nav-link>
-                    <x-nav-link href="#about-us">
+                    <x-nav-link href="/#about-us">
                         {{ __('About us') }}
                     </x-nav-link>
                     <div class="relative">
