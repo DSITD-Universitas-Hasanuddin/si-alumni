@@ -94,7 +94,7 @@
                 <div class="space-y-2 text-center">
                     <h2 class="text-3xl font-poppins font-bold decoration-blue-900">Jobs and Vacancy</h2>
                 </div>
-                @livewire('index-jobs')
+                @livewire('latest-jobs')
                 <a class="flex justify-end items-baseline mt-6 text-lg font-semibold text-blue-600 hover:text-blue-900 focus:text-blue-900"
                     href="{{ route('jobs') }}">
                     <span>Lihat Berita Selengkapnya</span>
