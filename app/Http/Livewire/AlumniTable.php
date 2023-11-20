@@ -10,6 +10,9 @@ use App\Exports\AlumnisExport;
 use Maatwebsite\Excel\Facades\Excel;
 use Rap2hpoutre\FastExcel\FastExcel;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+
 
 class AlumniTable extends Component
 {
@@ -33,24 +36,33 @@ class AlumniTable extends Component
         $this->showingUserProfileCard = true;
     }
 
-    // public function downloadData()
-    // {
-    //     return Excel::download(new AlumnisExport, 'Alumni.xlsx');
-    // }
+    public function downloadData()
+    {
+        $query = Alumni::query();
+        $namaFile = "Alumni.xlsx";
+
+        // Apply search if provided
+        if ($this->search) {
+            $data = $query->where('name', 'like', '%' . $this->search . '%')
+            ->orWhere('nim', 'like', $this->search . '%')
+            ->orWhere('program_studi', 'like', '%' . $this->search . '%')
+            ->orWhere('fakultas', 'like', '%' . $this->search . '%')
+            ->orWhere('email', 'like', $this->search . '%')->get();
+
+            (new FastExcel($data))->export("{$namaFile}");
+        } else {
+            (new FastExcel(Alumni::exportDataAlumni()))->export("{$namaFile}");
+        }
+
+        return $this->downloadPdfFile("{$namaFile}");
+    }
+
 
     public function downloadPdfFile($namaFile): BinaryFileResponse
     {
         return response()->download(public_path("{$namaFile}"))->deleteFileAfterSend();
     }
-    public function downloadData()
-    {
 
-        $namaFile = "Alumni.xlsx";
-
-        (new fastexcel(Alumni::exportDataAlumni()))->export("{$namaFile}");
-
-        return AlumniTable::downloadPdfFile("{$namaFile}");
-    }
 
     public function render()
     {

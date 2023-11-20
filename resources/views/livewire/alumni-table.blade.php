@@ -26,7 +26,7 @@
     </div>
 
     <div class="flex justify-end">
-        <button wire:click.prevent="downloadData" class="bg-green-500 hover:bg-green-700 text-white border border-green-700 rounded font-bold py-2 px-4 inline-flex items-center">
+        <button wire:click="downloadData" class="bg-green-500 hover:bg-green-700 text-white border border-green-700 rounded font-bold py-2 px-4 inline-flex items-center">
             <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
             <span>Export</span>
           </button>
