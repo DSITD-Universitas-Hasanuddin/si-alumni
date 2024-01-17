@@ -30,7 +30,9 @@ Route::get('/jobs', function () {
     return view('pages.jobs.index');
 })->name('jobs');
 Route::get('/jobs/{job:id}', \App\Http\Livewire\ShowJob::class)->name('jobs-post');
-
+Route::get('/newsletter', function () {
+    return view('pages.newsletter.index');
+})->name('newsletter');
 
 Route::middleware([
     'auth:sanctum',
@@ -40,9 +42,6 @@ Route::middleware([
     Route::get('/home', function () {
         return view('pages.home');
     })->name('home');
-    Route::get('/newsletter', function () {
-        return view('pages.newsletter.index');
-    })->name('newsletter');
     Route::get('/messages', function () {
         return view('pages.messages.show');
     })->name('messages');

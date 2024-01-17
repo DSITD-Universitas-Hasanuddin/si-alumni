@@ -69,7 +69,7 @@ class PenjaringAlumniResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->label('Nama')
-                    ->searchable(isIndividual: true),
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('nim')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('fakultas')
