@@ -88,6 +88,21 @@
             </article>
         </div>
 
+        <a id="newslet" class="block relative invisible top-[-70px]"></a>
+        <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-14 ">
+            <article>
+                <div class="space-y-2 mb-10 text-center">
+                    <h2 class="text-3xl font-poppins font-bold decoration-blue-900 ">Newsletter</h2>
+                </div>
+                @livewire('latest-newsletter')
+                <a class="flex justify-end items-baseline mt-6 text-lg font-semibold text-blue-600 hover:text-blue-900 focus:text-blue-900"
+                    href="{{ route('newsletter') }}">
+                    <span>Lihat Newsletter Selengkapnya</span>
+                    <span class="text-xs ml-1">&#x279c;</span>
+                </a>
+            </article>
+        </div>
+
         <a id="news" class="block relative invisible top-[-70px]"></a>
         <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-14 ">
             <article>
@@ -168,6 +183,19 @@
                                             </svg>
                                         </span>
                                         Diskusi dan Forum
+                                    </li>
+                                    <li class="flex items-center mb-4 text-base text-gray-600 dark:text-gray-400">
+                                        <span class="mr-3 text-blue-500 dark:text-blue-400 ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
+                                                fill="currentColor" class="w-6 h-6 bi bi-check-lg"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            Info lebih lanjut silahkan menghubungi<a href="https://wa.me/+6281253584528"> (+62)81253584528</a>                                    
+                                        </div>
                                     </li>
                                 </ul>
                             </div>

@@ -17,9 +17,7 @@
                     </div>
                     @else
                     <div class="text-white font-thin">
-                        Direktorat Hubungan Alumni &
-                        <br>
-                        Pengembangan Dana Abadi
+                        Direktorat Hubungan Alumni
                     </div>
                     <div class="text-white mb-2 font-thin">
                         Universitas Hasanuddin
