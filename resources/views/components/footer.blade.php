@@ -143,7 +143,7 @@
     </div>
     <div class=" px-10 py-4 border-t bg-prusblue text-base-content border-sky-950">
         <div class="text-center text-white">
-            <p>@ 2023 - Direktorat Hubungan Alumni Universitas Hasanuddin UNHAS & Informatika 20
+            <p>@ 2023 - Direktorat Hubungan Alumni Universitas Hasanuddin & Informatika 20
             </p>
         </div>
     </div>
