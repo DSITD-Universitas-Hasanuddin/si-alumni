@@ -200,7 +200,9 @@
                                             <br>
                                             <a class="py-2" href="https://wa.me/+6281243278996"> (+62)81243278996</a> 
                                             <br>                                   
-                                            <a class="py-2" href="https://wa.me/+6281243290809"> (+62)81243290809</a>                                    
+                                            <a class="py-2" href="https://wa.me/+6281243290809"> (+62)81243290809</a>
+                                            <br>
+                                            <p> E-mail : dirhapda@unhas.ac.id</p>                                    
                                     
                                         </div>
                                     </li>
