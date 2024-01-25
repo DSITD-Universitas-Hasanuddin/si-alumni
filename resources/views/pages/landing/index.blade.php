@@ -194,7 +194,14 @@
                                             </svg>
                                         </span>
                                         <div>
-                                            Info lebih lanjut silahkan menghubungi<a href="https://wa.me/+6281253584528"> (+62)81253584528</a>                                    
+                                            Info lebih lanjut silahkan menghubungi :<a href="https://wa.me/+6281253584528"> (+62)81253584528</a>
+                                            <br>
+                                            <a class="py-2" href="https://wa.me/+6281243278997"> (+62)81243278997</a>
+                                            <br>
+                                            <a class="py-2" href="https://wa.me/+6281243278996"> (+62)81243278996</a> 
+                                            <br>                                   
+                                            <a class="py-2" href="https://wa.me/+6281243290809"> (+62)81243290809</a>                                    
+                                    
                                         </div>
                                     </li>
                                 </ul>
