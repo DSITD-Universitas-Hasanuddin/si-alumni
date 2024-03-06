@@ -228,6 +228,9 @@
                 <x-responsive-nav-link href="{{ route('survey') }}">
                     {{ __('Survey Penjaring Alumni') }}
                 </x-responsive-nav-link>
+                <x-responsive-nav-link href="https://docs.google.com/forms/d/e/1FAIpQLSftBGvqLBsycQkiineNfAZbz0Ck9Ze_rhsCNVHW5w8BCz_lcw/viewform?usp=sf_link">
+                    {{ __('Survei Kepuasan Pelanggan') }}
+                </x-responsive-nav-link>
 
             @endif
 
