@@ -85,6 +85,9 @@
                                     <x-dropdown-link href="{{ route('survey') }}">
                                         {{ __('Survei Penjaring Alumni') }}
                                     </x-dropdown-link>
+                                    <x-dropdown-link href="https://docs.google.com/forms/d/e/1FAIpQLSftBGvqLBsycQkiineNfAZbz0Ck9Ze_rhsCNVHW5w8BCz_lcw/viewform?usp=sf_link">
+                                        {{ __('Survei Kepuasan Pelanggan') }}
+                                    </x-dropdown-link>
                                 </x-slot>
                             </div>
                         </x-dropdown>
