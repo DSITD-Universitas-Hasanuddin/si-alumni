@@ -11,6 +11,7 @@ use WireUi\Traits\Actions;
 class UpdateAdditionalInformationForm extends Component
 {
     use Actions;
+
     public function mount()
     {
         $this->state = Auth::user()->withoutRelations()->toArray();
@@ -20,17 +21,33 @@ class UpdateAdditionalInformationForm extends Component
     {
         $this->resetErrorBag();
 
+
         Validator::make($this->state, [
-            'jurusan' => ['nullable','string', 'max:255'],
+            'jurusan' => ['nullable', 'string', 'max:255'],
             'angkatan' => ['nullable', 'integer', 'max_digits:4'],
-            'instagram_account' => ['nullable','string', 'max:255'],
-            'profile_desc' => ['nullable','string', 'max:255'],
+            'instagram_account' => ['nullable', 'string', 'max:255'],
+            'profile_desc' => ['nullable', 'string', 'max:255'],
+            'tempat_kerja' => ['nullable', 'string', 'max:255'],
+            'nama_perusahaan' => ['nullable', 'string', 'max:255'],
+            'jabatan' => ['nullable', 'string', 'max:255'],
+            'provinsi' => ['nullable', 'string', 'max:255'],
+            'kota' => ['nullable', 'string', 'max:255'],
+            'level_perusahaan' => ['nullable', 'string', 'max:255'],
+            'alamat_perusahaan' => ['nullable', 'string', 'max:255'],
+
         ])->validateWithBag('updateAdditionalInformation');
 
         $user = Auth::user();
         $user->angkatan = $this->state['angkatan'];
         $user->instagram_account = $this->state['instagram_account'];
         $user->profile_desc = $this->state['profile_desc'];
+        $user->tempat_kerja = $this->state['tempat_kerja'];
+        $user->nama_perusahaan = $this->state['nama_perusahaan'];
+        $user->jabatan = $this->state['jabatan'];
+        $user->provinsi = $this->state['provinsi'];
+        $user->kota = $this->state['kota'];
+        $user->level_perusahaan = $this->state['level_perusahaan'];
+        $user->alamat_perusahaan = $this->state['alamat_perusahaan'];
 
         $user->save();
         $this->notification()->send([
