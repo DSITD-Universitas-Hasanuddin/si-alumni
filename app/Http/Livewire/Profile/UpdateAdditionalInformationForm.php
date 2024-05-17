@@ -32,6 +32,9 @@ class UpdateAdditionalInformationForm extends Component
             'jabatan' => ['nullable', 'string', 'max:255'],
             'provinsi' => ['nullable', 'string', 'max:255'],
             'kota' => ['nullable', 'string', 'max:255'],
+            'level_perusahaan' => ['nullable', 'string', 'max:255'],
+            'alamat_perusahaan' => ['nullable', 'string', 'max:255'],
+
         ])->validateWithBag('updateAdditionalInformation');
 
         $user = Auth::user();
@@ -43,8 +46,8 @@ class UpdateAdditionalInformationForm extends Component
         $user->jabatan = $this->state['jabatan'];
         $user->provinsi = $this->state['provinsi'];
         $user->kota = $this->state['kota'];
-
-
+        $user->level_perusahaan = $this->state['level_perusahaan'];
+        $user->alamat_perusahaan = $this->state['alamat_perusahaan'];
 
         $user->save();
         $this->notification()->send([

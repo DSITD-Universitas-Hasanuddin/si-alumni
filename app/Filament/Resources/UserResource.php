@@ -93,6 +93,16 @@ class UserResource extends Resource
                     ->disablePlaceholderSelection(),
                 Forms\Components\TextInput::make('kota')
                     ->maxLength(255),
+                Forms\Components\Select::make('level_perusahaan')
+                    ->options([
+                        'Multinasional' => 'Multinasional',
+                        'Nasional' => 'Nasional',
+                    ])
+                    ->searchable()
+                    ->default('')
+                    ->disablePlaceholderSelection(),
+                Forms\Components\TextInput::make('alamat_perusahaan')
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('email')
                     ->required(fn(string $context): bool => $context === 'create')
                     ->unique(ignoreRecord: true)
@@ -128,12 +138,16 @@ class UserResource extends Resource
                     ->label('Tempat Kerja'),
                 Tables\Columns\TextColumn::make('nama_perusahaan')
                     ->label('Nama Perusahaan'),
+                Tables\Columns\TextColumn::make('level_perusahaan')
+                    ->label('Level Perusahaan'),
                 Tables\Columns\TextColumn::make('jabatan')
                     ->label('Jabatan'),
                 Tables\Columns\TextColumn::make('provinsi')
                     ->label('Provinsi'),
                 Tables\Columns\TextColumn::make('kota')
-                    ->label('Kota'),
+                    ->label('Kota/Kabupaten'),
+                Tables\Columns\TextColumn::make('alamat_perusahaan')
+                    ->label('Alamat Perusahaan'),
                 Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('role'),
                 Tables\Columns\TextColumn::make('created_at')

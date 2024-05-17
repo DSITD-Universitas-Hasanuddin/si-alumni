@@ -42,13 +42,22 @@
             <x-input-error for="nama_perusahaan" class="mt-2" />
         </div>
         <div class="col-span-6 sm:col-span-4">
+            <x-label for="level_perusahaan" value="{{ __('Level Perusahaan') }}" />
+                <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="level_perusahaan" name="level_perusahaan"  wire:model.defer="state.level_perusahaan">
+                    <option value="Multinasional">Multinasional</option>
+                    <option value="Nasional" >Nasional</option>
+                </select>
+            {{-- <x-wireui.input id="provinsi" type="text" class="mt-1 block w-full" wire:model.defer="state.provinsi" />
+            <x-input-error for="provinsi" class="mt-2" /> --}}
+        </div>
+        <div class="col-span-6 sm:col-span-4">
             <x-label for="jabatan" value="{{ __('Jabatan') }}" />
             <x-wireui.input id="jabatan" type="text" class="mt-1 block w-full" wire:model.defer="state.jabatan" />
             <x-input-error for="jabatan" class="mt-2" />
         </div>
         <div class="col-span-6 sm:col-span-4">
             <x-label for="provinsi" value="{{ __('Provinsi') }}" />
-                <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="faculty" name="provinsi"  wire:model.defer="state.provinsi">
+                <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="provinsi" name="provinsi"  wire:model.defer="state.provinsi">
                     <option value="Aceh">Aceh</option>
                     <option value="Sumatera Utara" >Sumatera Utara</option>
                     <option value="Sumatera Barat" >Sumatera Barat</option>
@@ -85,12 +94,16 @@
                 </select>
             {{-- <x-wireui.input id="provinsi" type="text" class="mt-1 block w-full" wire:model.defer="state.provinsi" />
             <x-input-error for="provinsi" class="mt-2" /> --}}
-            
         </div>
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="kota" value="{{ __('Kota') }}" />
+            <x-label for="kota" value="{{ __('Kota/Kabupaten') }}" />
             <x-wireui.input id="kota" type="text" class="mt-1 block w-full" wire:model.defer="state.kota" />
             <x-input-error for="kota" class="mt-2" />
+        </div>
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="alamat_perusahaan" value="{{ __('Alamat Perusahaan') }}" />
+            <x-wireui.input id="alamat_perusahaan" type="text" class="mt-1 block w-full" wire:model.defer="state.alamat_perusahaan" />
+            <x-input-error for="alamat_perusahaan" class="mt-2" />
         </div>
     </x-slot>
     <x-slot name="actions">

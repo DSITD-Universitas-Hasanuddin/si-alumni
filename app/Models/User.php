@@ -42,6 +42,8 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
         'jabatan',
         'provinsi',
         'kota',
+        'level_perusahaan',
+        'alamat_perusahaan',
         'email',
         'show_email',
         'phone_number',
