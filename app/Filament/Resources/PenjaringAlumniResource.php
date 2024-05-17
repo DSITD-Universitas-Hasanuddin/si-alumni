@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use AlperenErsoy\FilamentExport\Actions\FilamentExportBulkAction;
+use AlperenErsoy\FilamentExport\Actions\FilamentExportHeaderAction;
 use App\Filament\Resources\PenjaringAlumniResource\Pages;
 use App\Filament\Resources\PenjaringAlumniResource\RelationManagers;
 use App\Models\PenjaringAlumni;
@@ -105,6 +106,9 @@ class PenjaringAlumniResource extends Resource
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
                 FilamentExportBulkAction::make('export')
+            ])
+            ->headerActions([
+                FilamentExportHeaderAction::make('export')
             ]);
     }
 
