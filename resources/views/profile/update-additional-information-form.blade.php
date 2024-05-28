@@ -51,6 +51,34 @@
             <x-input-error for="provinsi" class="mt-2" /> --}}
         </div>
         <div x-data="{ selectedOption: '', otherInput: '' }" class="col-span-6 sm:col-span-4">
+            <x-label for="jenis_perusahaan" value="{{ __('Jenis Perusahaan') }}" />
+            <select x-model="selectedOption" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="jenis_perusahaan" name="jenis_perusahaan" wire:model.defer="state.jenis_perusahaan">
+                <option value="{{ $this->state['jenis_perusahaan'] }}">{{ $this->state['jenis_perusahaan'] }}</option>
+                <option value="Agriculture / Fishing / Forestry">Agriculture / Fishing / Forestry</option>
+                <option value="Construction / Real Estate">Construction / Real Estate</option>
+                <option value="Consulting/Professional Services">Consulting/Professional Services</option>
+                <option value="Consumer Goods">Consumer Goods</option>
+                <option value="Education">Education</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Entertainment / Leisure">Entertainment / Leisure</option>
+                <option value="Finance / Banking">Finance / Banking</option>
+                <option value="Government/Public sector">Government/Public sector</option>
+                <option value="Health/Medical">Health/Medical</option>
+                <option value="Hospitality / Travel / Tourism">Hospitality / Travel / Tourism</option>
+                <option value="HR / Recruitment / Training">HR / Recruitment / Training</option>
+                <option value="Law">Law</option>
+                <option value="Logistics/Transportation Manufacturing">Logistics/Transportation Manufacturing</option>
+                <option value="Media / Advertising">Media / Advertising</option>
+                <option value="Metals / Mining">Metals / Mining</option>
+                <option value="Non-profit/ Charity">Non-profit/ Charity</option>
+                <option value="Other">Lainnya</option>
+            </select>
+            <div x-show="selectedOption === 'Other'" class="mt-2">
+                <x-label for="jenis_perusahaan_lainnya" value="{{ __('Input Jenis Perusahaan') }}" />
+                <input type="text" id="jenis_perusahaan_lainnya" name="jenis_perusahaan_lainnya" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" x-model="otherInput" wire:model.defer="state.jenis_perusahaan_lainnya" />
+            </div>
+        </div>
+        <div x-data="{ selectedOption: '', otherInput: '' }" class="col-span-6 sm:col-span-4">
             <x-label for="jabatan" value="{{ __('Jabatan') }}" />
             <select x-model="selectedOption" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="jabatan" name="jabatan" wire:model.defer="state.jabatan">
                 <option value="{{ $this->state['jabatan'] }}">{{ $this->state['jabatan'] }}</option>
