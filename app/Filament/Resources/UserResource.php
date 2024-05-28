@@ -48,8 +48,19 @@ class UserResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('nama_perusahaan')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('jabatan')
-                    ->maxLength(255),
+                Forms\Components\Select::make('jabatan')
+                    ->options([
+                        'Tingkat Direktur(misal, Direktur Utama, Direktur Operasional, Direktur Keuangan)' => 'Tingkat Direktur(misal, Direktur Utama, Direktur Operasional, Direktur Keuangan)',
+                        'Direktur' => 'Direktur',
+                        'HRD (SDM) Profesional' => 'HRD (SDM) Profesional',
+                        'Manajer' => 'Manajer',
+                        'Konsultan/Penasihat' => 'Konsultan/Penasihat',
+                        'Analis/Spesialis' => 'Analis/Spesialis',
+                        'Lainnya: …' => 'Lainnya: …',
+                    ])
+                    ->searchable()
+                    ->default('')
+                    ->disablePlaceholderSelection(),
                 Forms\Components\Select::make('provinsi')
                     ->options([
                         'Aceh' => 'Aceh',
@@ -102,6 +113,35 @@ class UserResource extends Resource
                     ->searchable()
                     ->default('')
                     ->disablePlaceholderSelection(),
+                Forms\Components\Select::make('jenis_perusahaan')
+                    ->options([
+                        'Agriculture / Fishing / Forestry' => 'Agriculture / Fishing / Forestry',
+                        'Construction / Real Estate' => 'Construction / Real Estate',
+                        'Consulting / Professional Services' => 'Consulting/Professional Services',
+                        'Consumer Goods' => 'Consumer Goods',
+                        'Defence / Security / Rescue' => 'Defence / Security / Rescue',
+                        'Education' => 'Education',
+                        'Engineering' => 'Engineering',
+                        'Entertainment / Leisure' => 'Entertainment / Leisure',
+                        'Finance / Banking' => 'Finance / Banking',
+                        'Government/Public sector' => 'Government/Public sector',
+                        'Health/Medical' => 'Health/Medical',
+                        'Hospitality / Travel / Tourism' => 'Hospitality / Travel / Tourism',
+                        'HR / Recruitment / Training' => 'HR / Recruitment / Training',
+                        'Law' => 'Law',
+                        'Logistics/Transportation Manufacturing' => 'Logistics/Transportation Manufacturing',
+                        'Media / Advertising' => 'Media / Advertising',
+                        'Metals / Mining' => 'Metals / Mining',
+                        'Non-profit/ Charity' => 'Non-profit/ Charity',
+                        'Lainnya: …' => 'Lainnya: …',
+                    ])
+                    ->searchable()
+                    ->default('')
+                    ->disablePlaceholderSelection(),
+                    // ->createOptionForm([
+                    //     Forms\Components\TextInput::make('jenis_perusahaan')
+                    //         ->nullable(),
+                    // ]),
                 Forms\Components\TextInput::make('alamat_perusahaan')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
@@ -141,12 +181,14 @@ class UserResource extends Resource
                     ->label('Nama Perusahaan'),
                 Tables\Columns\TextColumn::make('level_perusahaan')
                     ->label('Level Perusahaan'),
+                Tables\Columns\TextColumn::make('jenis_perusahaan')
+                    ->label('Jenis Perusahaan'),
                 Tables\Columns\TextColumn::make('jabatan')
                     ->label('Jabatan'),
                 Tables\Columns\TextColumn::make('provinsi')
-                    ->label('Provinsi'),
+                    ->label('Provinsi Tempat Kerja'),
                 Tables\Columns\TextColumn::make('kota')
-                    ->label('Kota/Kabupaten'),
+                    ->label('Kota/Kabupaten Tempat Kerja'),
                 Tables\Columns\TextColumn::make('alamat_perusahaan')
                     ->label('Alamat Perusahaan'),
                 Tables\Columns\TextColumn::make('email'),
