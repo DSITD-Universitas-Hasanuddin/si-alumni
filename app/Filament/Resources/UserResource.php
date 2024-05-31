@@ -192,7 +192,7 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('alamat_perusahaan')
                     ->label('Alamat Perusahaan'),
                 Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('profile_photo_url'),
+                // Tables\Columns\TextColumn::make('profile_photo_url'),
                 Tables\Columns\TextColumn::make('role'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
